@@ -9,6 +9,8 @@ let rainSound = document.querySelector("#rain");
 let movieDiv = document.querySelector("#movie");
 let movieOne = document.querySelector("#movieOne");
 
+typeSound.volume = 0.8;
+rainSound.volume = 0.2;
 
 startButton.addEventListener('click', startAnimation);
 
@@ -21,7 +23,6 @@ function startAnimation(){
 		starter.style.display ="none";
 		typewriter();
 		typeSound.play();
-		rainSound.play();
 	}
 }
 
@@ -64,7 +65,6 @@ function typewriter(){
   else{
   	typedText.classList.add('enable');
   	typeSound.pause();
-  	rainSound.pause();
   }
  } else {
   setTimeout("typewriter()", iSpeed);
@@ -77,6 +77,7 @@ function startMovie(){
 	console.log("hey you");
 	typeScene.style.display = "none";
 	movieDiv.style.display = "block";
+	rainSound.pause();
 	movieOne.play();
 }
 
