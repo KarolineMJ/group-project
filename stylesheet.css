@@ -5,6 +5,8 @@ body{
 	background-image: url("pic/office.png");
 	width: 1024px;
 	height: 768px;
+	position: absolute;
+	display:none;
 
 }
 #typedtext{
@@ -18,9 +20,56 @@ body{
 	margin-left: 500px;
 	padding:30px;
 	line-height: 150%;
+	position: absolute;
+	margin-top: 70px;
+}
+#movie{
+	position: absolute;
+	display: none;
 }
 
 
+#starter img{
+	position: absolute;
+}
 
+#typedtext.enable{
+	animation: disappear 4s forwards;
+}
+
+
+button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #336575;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 2px #999;
+  position: relative;
+  margin-top:364px;
+  margin-left:384px;
+  width:200px;
+}
+
+button:hover {background-color: #234854}
+
+button:active {
+  background-color: #234854;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 @font-face { font-family: Special Elite; src: url('SpecialElite.TTF'); }
+
+@keyframes disappear {
+
+	100%{
+		opacity: 0;
+	}
+}
