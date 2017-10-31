@@ -1,0 +1,26 @@
+body{
+	margin: 0;
+}
+#typer{
+	background-image: url("pic/office.png");
+	width: 1024px;
+	height: 768px;
+
+}
+#typedtext{
+	font-family: 'Special Elite', sans-serif;
+	color: black;
+	font-size: 25px;
+	background-color: rgba(255, 255, 255, 0.6);
+	box-shadow: 0 0 8px 7px rgba(255, 255, 255, 0.6);
+	width: 420px;
+	height: 410px;
+	margin-left: 500px;
+	padding:30px;
+	line-height: 150%;
+}
+
+
+
+
+@font-face { font-family: Special Elite; src: url('SpecialElite.TTF'); }
