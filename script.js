@@ -8,6 +8,12 @@ let typeSound = document.querySelector("#typing");
 let rainSound = document.querySelector("#rain");
 let movieDiv = document.querySelector("#movie");
 let movieOne = document.querySelector("#movieOne");
+let mainScene = document.querySelector("#main");
+let openDoor = document.querySelector("#open-door");
+let marlow = document.querySelector("#marlow");
+let carmen = document.querySelector("#carmen");
+let wonderful = document.querySelector("#wonderful");
+let eddie = document.querySelector("#eddie");
 
 typeSound.volume = 0.8;
 rainSound.volume = 0.2;
@@ -79,6 +85,20 @@ function startMovie(){
 	movieDiv.style.display = "block";
 	rainSound.pause();
 	movieOne.play();
+	movieOne.addEventListener('ended', movieEnded);
 }
+
+function movieEnded(){
+	console.log("the movie ended");
+	movieDiv.style.display = "none";
+	mainScene.style.display = "block";
+	openDoor.style.display = "block";
+	marlow.style.display = "block";
+	eddie.style.display = "block";
+	wonderful.style.display = "block";
+	carmen.style.display = "block";
+}
+
+
 
 

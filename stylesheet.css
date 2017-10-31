@@ -31,6 +31,13 @@ body{
 	display: none;
 }
 
+#main{
+	background-image: url("pic/background.png");
+	width: 1024px;
+	height: 768px;
+	position: absolute;
+	display:none;
+}
 
 #starter img{
 	position: absolute;
@@ -40,6 +47,66 @@ body{
 	animation: disappear 4s forwards;
 }
 
+#open-door{
+	background-image: url("pic/closed-door.png");
+	height:305px;
+	width: 180px;
+	margin-top: 157px;
+	margin-left: 52px;
+	position: absolute;
+	display: none;
+	z-index: 2;
+}
+#open-door:hover{
+	background-image: url("pic/open-door.png");
+	height:305px;
+	width: 180px;
+	margin-top: 157px;
+	margin-left: 52px;
+	position: absolute;
+	display: none;
+	z-index: 3;
+}
+#carmen{
+	background-image: url("pic/carmen.png");
+	height:519px;
+	width: 215px;
+	margin-top: 283px;
+	margin-left: 815px;
+	position: absolute;
+	display: none;
+	z-index: 4;
+}
+#wonderful{
+	background-image: url("pic/wonderful.png");
+	height:485px;
+	width: 277px;
+	margin-top: 294px;
+	margin-left: 147px;
+	position: absolute;
+	display: none;
+	z-index: 4;
+}
+#marlow{
+	background-image: url("pic/marlow.png");
+	height:609px;
+	width: 287px;
+	margin-top: 235px;
+	margin-left: 353px;
+	position: absolute;
+	display: none;
+	z-index: 5;
+}
+#eddie{
+	background-image: url("pic/eddie.png");
+	height: 606px;
+	width: 279px;
+	margin-top: 210px;
+	margin-left: 568px;
+	position: absolute;
+	display: none;
+	z-index: 4;
+}
 
 button {
   display: inline-block;
