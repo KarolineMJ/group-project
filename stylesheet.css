@@ -108,6 +108,48 @@ body{
 	z-index: 4;
 }
 
+#wonderfulShadow{
+	background-image: url("pic/shadow-wonderful.png");
+	height:485px;
+	width: 277px;
+	margin-top: 294px;
+	margin-left: 147px;
+	position: absolute;
+	display: none;
+	z-index: 4;
+}
+#eddieShadow{
+	background-image: url("pic/shadow-eddie.png");
+	height: 606px;
+	width: 279px;
+	margin-top: 210px;
+	margin-left: 568px;
+	position: absolute;
+	display: none;
+	z-index: 4;
+}
+#marlowShadow{
+	background-image: url("pic/shadow-marlow.png");
+	height:609px;
+	width: 287px;
+	margin-top: 235px;
+	margin-left: 353px;
+	position: absolute;
+	display: none;
+	z-index: 5;
+}
+#carmenShadow{
+	background-image: url("pic/shadow-carmen.png");
+	height:519px;
+	width: 215px;
+	margin-top: 283px;
+	margin-left: 815px;
+	position: absolute;
+	display: none;
+	z-index: 4;
+}
+
+
 button {
   display: inline-block;
   padding: 15px 25px;

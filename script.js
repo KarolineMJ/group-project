@@ -14,6 +14,17 @@ let marlow = document.querySelector("#marlow");
 let carmen = document.querySelector("#carmen");
 let wonderful = document.querySelector("#wonderful");
 let eddie = document.querySelector("#eddie");
+let sound = document.querySelector("#backgroundsound");
+let eddieShadow = document.querySelector("#eddieShadow");
+let carmenShadow = document.querySelector("#carmenShadow");
+let wonderfulShadow = document.querySelector("#wonderfulShadow");
+let marlowShadow = document.querySelector("#marlowShadow");
+let marlowSound = document.querySelector("#marlowSound");
+let wonderfulSound = document.querySelector("#wonderfulSound");
+let carmenSound = document.querySelector("#carmenSound");
+let eddieSound = document.querySelector("#eddieSound");
+
+
 
 typeSound.volume = 0.8;
 rainSound.volume = 0.2;
@@ -93,12 +104,70 @@ function movieEnded(){
 	movieDiv.style.display = "none";
 	mainScene.style.display = "block";
 	openDoor.style.display = "block";
-	marlow.style.display = "block";
-	eddie.style.display = "block";
-	wonderful.style.display = "block";
-	carmen.style.display = "block";
+	marlowShadow.style.display = "block";
+	eddieShadow.style.display ="block";
+	wonderfulShadow.style.display = "block";
+	carmenShadow.style.display = "block";
+	sound.play();
 }
 
+marlowShadow.onmouseover = function(){mouseOver()};
+marlowShadow.onmouseout = function(){mouseOut()};
 
+function mouseOver(){
+	marlowShadow.style.display="none";
+	marlow.style.display="block";
+	marlowSound.play();
+}
 
+function mouseOut(){
+	marlowShadow.style.display="block";
+	marlow.style.display="none";
+	marlowSound.pause();
+}
 
+eddieShadow.onmouseover = function(){mouseOverEddíe()};
+eddieShadow.onmouseout = function(){mouseOutEddie()};
+
+function mouseOverEddíe(){
+	eddieShadow.style.display="none";
+	eddie.style.display="block";
+	eddieSound.play();
+}
+
+function mouseOutEddie(){
+	eddieShadow.style.display="block";
+	eddie.style.display="none";
+	eddieSound.pause();
+}
+
+wonderfulShadow.onmouseover = function(){mouseOverWonderful()};
+wonderfulShadow.onmouseout = function(){mouseOutWonderful()};
+
+function mouseOverWonderful(){
+	wonderfulShadow.style.display="none";
+	wonderful.style.display="block";
+	wonderfulSound.play();
+}
+
+function mouseOutWonderful(){
+	wonderfulShadow.style.display="block";
+	wonderful.style.display="none";
+	wonderfulSound.pause();
+}
+
+carmenShadow.onmouseover = function(){mouseOverCarmen()};
+carmenShadow.onmouseout = function(){mouseOutCarmen()};
+
+function mouseOverCarmen(){
+	carmenShadow.style.display="none";
+	carmen.style.display="block";
+	carmenSound.play();
+}
+
+function mouseOutCarmen(){
+	carmenShadow.style.display="block";
+	carmen.style.display="none";
+	carmenSound.pause();
+
+}
