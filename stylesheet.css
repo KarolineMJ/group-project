@@ -44,7 +44,7 @@ body{
 }
 
 #typedtext.enable{
-	animation: disappear 4s forwards;
+	animation: disappear 4s 1s forwards;
 }
 
 #open-door{
@@ -151,6 +151,28 @@ body{
 	position: absolute;
 	display: none;
 	z-index: 4;
+}
+
+#poster.enable{
+	background-image: url("pic/poster.png");
+	height: 272px;
+	width: 143px;
+	margin-top: 42px;
+	margin-left: 621px;
+	position: absolute;
+	display: none;
+	z-index: 2;
+}
+
+#poster{
+	background-image: url("pic/poster-clean.png");
+	height: 272px;
+	width: 143px;
+	margin-top: 42px;
+	margin-left: 621px;
+	position: absolute;
+	display: none;
+	z-index: 2;
 }
 
 /*

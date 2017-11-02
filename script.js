@@ -15,6 +15,8 @@ let carmen = document.querySelector("#carmen");
 let wonderful = document.querySelector("#wonderful");
 let eddie = document.querySelector("#eddie");
 let sound = document.querySelector("#backgroundsound");
+let missingPoster = document.querySelector("#missing-poster");
+let poster = document.querySelector("#poster");
 
 
 /*
@@ -33,7 +35,7 @@ let eddieSound = document.querySelector("#eddieSound");
 
 typeSound.volume = 0.8;
 rainSound.volume = 0.2;
-sound.volume = 0.5;
+sound.volume = 0.1;
 
 
 startButton.addEventListener('click', startAnimation);
@@ -78,7 +80,7 @@ function typewriter(){
  while ( iRow < iIndex ) {
   sContents += aText[iRow++] + '<br />';
  }
- destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+ destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + " ";
  if ( iTextPos++ == iArrLength ) {
   iTextPos = 0;
   iIndex++;
@@ -115,6 +117,7 @@ function movieEnded(){
 	eddie.style.display ="block";
 	wonderful.style.display = "block";
 	carmen.style.display = "block";
+	poster.style.display = "block";
 	sound.play();
 }
 
@@ -122,7 +125,10 @@ marlow.onmouseover = function(){mouseOver()};
 marlow.onmouseout = function(){mouseOut()};
 
 function mouseOver(){
-	marlowSound.play();
+	//if (marlowSound.paused) {
+		marlowSound.currentTime=0;
+  		marlowSound.play()
+	//}
 }
 
 function mouseOut(){
@@ -131,9 +137,10 @@ function mouseOut(){
 
 
 eddie.onmouseover = function(){mouseOverEddíe()};
-eddieS.onmouseout = function(){mouseOutEddie()};
+eddie.onmouseout = function(){mouseOutEddie()};
 
 function mouseOverEddíe(){
+	eddie.currentTime=0;
 	eddieSound.play();
 }
 
@@ -145,6 +152,7 @@ wonderful.onmouseover = function(){mouseOverWonderful()};
 wonderful.onmouseout = function(){mouseOutWonderful()};
 
 function mouseOverWonderful(){
+	wonderful.currentTime=0;
 	wonderfulSound.play();
 }
 
@@ -156,10 +164,17 @@ carmen.onmouseover = function(){mouseOverCarmen()};
 carmen.onmouseout = function(){mouseOutCarmen()};
 
 function mouseOverCarmen(){
+	carmen.currentTime=0;
 	carmenSound.play();
 }
 
 function mouseOutCarmen(){
 	carmenSound.pause();
 
+}
+
+poster.addEventListener('click', getMissingPoster);
+
+function getMissingPoster(){
+	poster.classList.toggle('enable')
 }
