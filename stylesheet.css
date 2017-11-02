@@ -12,6 +12,27 @@ body{
 	display:none;
 
 }
+#startButton{
+	background-image: url("pic/play-02.png");
+	height: 130px;
+	width: 90px;
+	margin-top: 268px;
+	margin-left: 388px;
+	position: absolute;
+	z-index: 2;
+    filter: drop-shadow(1px 1px 5px #000000);
+    cursor: pointer;
+}
+
+#credits{
+	background-image: url("pic/credits.png");
+	width: 1024px;
+	height: 768px;
+	position: absolute;
+	display:none;
+}
+
+
 #typedtext{
 	font-family: 'Special Elite', sans-serif;
 	color: black;
@@ -37,6 +58,10 @@ body{
 	height: 768px;
 	position: absolute;
 	display:none;
+}
+#endScene{
+	position: absolute;
+	display: none;
 }
 
 #starter img{
@@ -175,75 +200,69 @@ body{
 	z-index: 2;
 }
 
-/*
-
-#wonderfulShadow{
-	background-image: url("pic/shadow-wonderful.png");
-	height:485px;
-	width: 277px;
-	margin-top: 294px;
-	margin-left: 147px;
+#netflix{
+	background-image: url("pic/netflix.png");
+	height: 124px;
+	width: 125px;
+	margin-top: 520px;
+	margin-left: 801px;
 	position: absolute;
 	display: none;
-	z-index: 4;
+	z-index: 2;
 }
-#eddieShadow{
-	background-image: url("pic/shadow-eddie.png");
-	height: 606px;
-	width: 279px;
-	margin-top: 210px;
-	margin-left: 568px;
+#netflix:hover{
+	background-image: url("pic/netflix.png");
+	height: 124px;
+	width: 125px;
+	margin-top: 520px;
+	margin-left: 801px;
 	position: absolute;
 	display: none;
-	z-index: 4;
+	filter: drop-shadow(1px 1px 5px #ffffff);
+	z-index: 2;
 }
-#marlowShadow{
-	background-image: url("pic/shadow-marlow.png");
-	height:609px;
-	width: 287px;
-	margin-top: 235px;
-	margin-left: 353px;
+
+#imdb{
+	background-image: url("pic/imdb.png");
+	height: 124px;
+	width: 125px;
+	margin-top: 520px;
+	margin-left: 621px;
 	position: absolute;
 	display: none;
-	z-index: 5;
+	z-index: 2;
 }
-#carmenShadow{
-	background-image: url("pic/shadow-carmen.png");
-	height:519px;
-	width: 215px;
-	margin-top: 283px;
-	margin-left: 815px;
+#imdb:hover{
+	background-image: url("pic/imdb.png");
+	height: 124px;
+	width: 125px;
+	margin-top: 520px;
+	margin-left: 621px;
 	position: absolute;
 	display: none;
-	z-index: 4;
+	filter: drop-shadow(1px 1px 5px #ffffff);
+	z-index: 2;
 }
-*/
-
-button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #336575;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 2px #999;
-  position: relative;
-  margin-top:364px;
-  margin-left:384px;
-  width:200px;
+#replay{
+	background-image: url("pic/replay.png");
+	height: 124px;
+	width: 125px;
+	margin-top: 520px;
+	margin-left: 449px;
+	position: absolute;
+	display: none;
+	z-index: 2;
 }
-
-button:hover {background-color: #234854}
-
-button:active {
-  background-color: #234854;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+#replay:hover{
+	background-image: url("pic/replay.png");
+	height: 124px;
+	width: 125px;
+	margin-top: 520px;
+	margin-left: 449px;
+	position: absolute;
+	display: none;
+	filter: drop-shadow(1px 1px 5px #ffffff);
+	z-index: 2;
 }
 
 @font-face { font-family: Special Elite; src: url('SpecialElite.TTF'); }

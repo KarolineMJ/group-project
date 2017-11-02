@@ -17,6 +17,13 @@ let eddie = document.querySelector("#eddie");
 let sound = document.querySelector("#backgroundsound");
 let missingPoster = document.querySelector("#missing-poster");
 let poster = document.querySelector("#poster");
+let movieTwo = document.querySelector("#movieTwo");
+let lastScene = document.querySelector("#lastScene");
+let endSceneDiv = document.querySelector("#endScene");
+let creditPage = document.querySelector("#credits");
+let netflixButton = document.querySelector("#netflix");
+let replatyButton = document.querySelector("#replay");
+let imdbButton = document.querySelector("#imdb");
 
 
 /*
@@ -47,6 +54,7 @@ function startAnimation(){
 		console.log("this is working");
 		typeScene.style.display ="block";
 		starter.style.display ="none";
+		startButton.style.display = "none";
 		typewriter();
 		typeSound.play();
 	}
@@ -140,7 +148,7 @@ eddie.onmouseover = function(){mouseOverEddíe()};
 eddie.onmouseout = function(){mouseOutEddie()};
 
 function mouseOverEddíe(){
-	eddie.currentTime=0;
+	eddieSound.currentTime=0;
 	eddieSound.play();
 }
 
@@ -152,7 +160,7 @@ wonderful.onmouseover = function(){mouseOverWonderful()};
 wonderful.onmouseout = function(){mouseOutWonderful()};
 
 function mouseOverWonderful(){
-	wonderful.currentTime=0;
+	wonderfulSound.currentTime=0;
 	wonderfulSound.play();
 }
 
@@ -164,7 +172,7 @@ carmen.onmouseover = function(){mouseOverCarmen()};
 carmen.onmouseout = function(){mouseOutCarmen()};
 
 function mouseOverCarmen(){
-	carmen.currentTime=0;
+	carmenSound.currentTime=0;
 	carmenSound.play();
 }
 
@@ -177,4 +185,42 @@ poster.addEventListener('click', getMissingPoster);
 
 function getMissingPoster(){
 	poster.classList.toggle('enable')
+}
+
+openDoor.addEventListener('click', startSecoundMovie);
+
+function startSecoundMovie(){
+	movieTwo.play();
+	lastScene.style.display="none";
+	endSceneDiv.style.display="block";
+	sound.pause();
+	movieTwo.addEventListener('ended', movieTwoEnded);
+}
+
+function movieTwoEnded(){
+	endSceneDiv.style.display="none";
+	credits.style.display="block";
+	sound.currentTime=0;
+	sound.play();
+	imdbButton.style.display="block";
+	netflixButton.style.display="block";
+	replatyButton.style.display="block";
+}
+
+netflixButton.addEventListener('click', openNetflix);
+
+function openNetflix(){
+	window.open("https://www.netflix.com/watch/305718?trackId=14170045&tctx=0%2C0%2C7726ebd8-9053-46e7-ab84-de2383f6d046-44674569");
+}
+
+imdbButton.addEventListener('click', openImdb);
+
+function openImdb(){
+	window.open("http://www.imdb.com/title/tt0038355/?ref_=nv_sr_1");
+}
+
+replatyButton.addEventListener('click', refreshPage);
+
+function refreshPage(){
+	window.location.reload();
 }
